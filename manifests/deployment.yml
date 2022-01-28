@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "mxlabs-9278"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "mxlabs-9278"
+  template:
+    metadata:
+      labels:
+        app: "mxlabs-9278"
+    spec:
+      containers:
+        - name: "mxlabs-9278"
+          image: "mxlcr01.azurecr.io/mxlabs"
+          ports:
+          - containerPort: 22022
