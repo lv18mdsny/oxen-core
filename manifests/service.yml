@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "mxlabs-9278"
+    labels:
+        app: "mxlabs-9278"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 22022
+      targetPort: 22022
+      protocol: TCP
+      name: http
+    selector:
+        app: "mxlabs-9278"
